@@ -1,9 +1,13 @@
 #include <iostream>
 
-#include "set"
+#include "hash_set.h"
 
 int main() {
-    std::set<int> s;
+    HashSet<std::string> set(10);
+
+    set.insert("hello");
+    std::cout << set.contains("hello") << ' ' << set.contains("world") << '\n';
+    set.clear();
 
     return 0;
 }
